@@ -11,6 +11,9 @@ Acontece que gostei do resultado inicial e vejo que posso melhorar esse projeto 
 Essa página foi feita como treinamento, e agora vai ser página oficial da hambuegueria de um amigo.
 
 
+Esse projeto será melhorado com Javascript e antes de publicado já estará responsivo.
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -29,3 +32,4 @@ It turns out that I liked the initial result and I see that I can improve this p
 This page was made as a training, and now it will be the official page of a friend's hamburger place.
 
 
+This project will be improved with Javascript and before being published it will already be responsive.
