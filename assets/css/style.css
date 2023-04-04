@@ -1,312 +1,297 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;600;700&display=swap');
 
+* {
+	margin: 0;
+	padding: 0;
+}
 
 :root {
 	--primary-color: #feaf2b;
 	--secundary-color: #6a3b0d;
 	--light: #fcfefe;
-	--dark: #0E0D0c;
+	--dark: #050A09;
 }
 
 body {
-	margin:0;
-	padding: 0;
-	box-sizing: border-box;
+	box-sizing: content-box;
 	font-family: 'Roboto Mono', sans-serif;
+	background: #333;
 }
 
-
-.container {
-	background-color: #F00;
-	width: var(--widthRoot);
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	
-}
 
 header {
-	height: 80px;
 	width: 100vw;
-	display: flex;
-	align-items: center;
+	height: 80px;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#header-container {
+	display:flex;
 	justify-content: space-around;
-	/*background-color: #000;*/
-	;position: fixed;
-	background-color: rgba(0, 0, 0, .5);
-	
-	
+	align-items: center;
 }
 
-header #logo-icon {
-	color: var(--primary-color);
-	font-size: 25px;
-	text-decoration: none;
-	font-weight: 600;
-}
-
-#logo-icon img {
+#header-container #header-logo img {
 	width: 80px;
-	height: 85px;
+	height: 80px;
 }
 
-#location-burguer a {
+#header-container #location {
+	font-size: 15px;
 	text-decoration: none;
 	color: var(--light);
-	font-size: 13px;
+	transition: all 0.5s ease;
 }
 
-#location-burguer a:hover {
+#header-container #location:hover {
 	color: var(--primary-color);
-}
-
-#location-burguer i {
-	transform: scale(1.2);
-}
-
-#location-burguer:hover {
 	transform: scale(1.05);
+
 }
 
-#nav-menu ul{
+#header-container ul {
 	display: flex;
+	list-style: none;
 }
 
-#nav-menu ul a {
-	list-style: none;
+#header-container ul a {
+	padding: 0px 15px;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 15px;
-	font-weight: 600;
-	padding: 0px 15px;	
+	font-weight: 400;
+	color: var(--light);
+	transition: all 0.5s ease;
+}
+
+#header-container ul a.active{
+	border-bottom: 1px solid var(--primary-color);
+}
+
+#header-container ul a:hover {
+	transform: scale(1.1);
 	color: var(--primary-color);
 }
 
-#nav-menu ul a:hover {
-	transform: scale(1.2);
-	font-style: italic;
-	color: var(--secundary-color);
+#content-button {
+	width: 40px;
+	height: 30px;
+	display: none;
+}
+
+
+.line-button {
+	width: 30px;
+	height: 2px;
+	margin: 5px;
+	background-color: var(--light);
+}
+
+#banner-container {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/banner.jpg);
+	background-size: cover;
+	background-position: top;
 }
 
 #banner {
-	height:calc(100vh);
-	width: 100vw;
-	background-image: url(../images/banner.jpg);
-	background-position: center;
-	background-size: cover;
-}
-
-#banner-info {
-	max-width: 100vw;
-	width: 100%;
+	width: inherit;
 	height: inherit;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.7);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
-
 #banner-title h1 {
-	font-weight:200;
-	font-size: 80px;
-	letter-spacing: 10px;
-	margin-top: 50px;
+	margin-top: 190px;
 	text-transform: uppercase;
+	font-size: 80px;
+	font-weight: 200;
+	letter-spacing: 10px;
 	color: var(--primary-color);
 	text-shadow: 2px 3px 5px var(--primary-color);
 }
 
-.banner-options {
+#banner-options {
 	width: 100vw;
-	height: 120px;
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
+	justify-content: center;
 }
 
 .option {
 	display: flex;
-	font-size: 14px;
-	font-weight: 600;
 	flex-direction: column;
-	justify-content: space-around;
 	align-items: center;
-	color: var(--light);
+	justify-content: space-evenly;
 	width: 120px;
 	height: 120px;
 	border: 1px solid var(--primary-color);
-	box-shadow: 2px 2px 2px var(--secundary-color);
-	cursor: pointer;
 	text-decoration: none;
 	text-transform: uppercase;
-
-}
-
-.option i {
-	transform: scale(2.9);
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--light);
+	margin: 50px;
+	transition: all 0.5s ease;
 }
 
 .option:hover {
-	font-size: 16px;
-	transition: all .5s ease;
-	
-	background-color: var(--secundary-color);
-}
-
-#aboutUs {
-	height: 100vh;
-	width: 100vw;
-	background-color: #000;
-	color: var(--light);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 13px;
-	line-height: 20px;
-	font-weight: 400;
-	background-image: url(../images/churrasTeam.jpg);
-	background-size: cover;
-	background-position: bottom;
-}
-
-#history-burguer {
-	background-color: rgba(0, 0, 0, 0.7);
-}
-
-
-#aboutUs #history-burguer {
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 0px 20px;
-
-}
-
-#aboutUs #history-burguer h1 {
-	color: var(--primary-color);
-	text-shadow: 2px 3px 5px var(--primary-color);
-	font-weight:400;
-	font-size: 30px;
-	margin-top: 30px;
-	text-transform: uppercase;
-
-}
-
-#galery-burguer {
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--secundary-color);
-}
-
-#galery-burguer h1 {
-	font-size: 30px;
-	font-weight:400;
-	text-shadow: 2px 3px 5px var(--primary-color);
-	text-transform: uppercase;
-	color: var(--primary-color);
-}
-
-#galery-content {
-	width: 900px;
-	height: 540px;
-	display: grid;
-	grid-template: column;
-	grid-template-columns: repeat(4, 200px);
-	gap: 15px;
-	padding: 5px;
-	align-items: center;
-	justify-content: center;
-}
-
-.galery-item {
-	background-color: #00F;
-	width: 200px;
-	height: 180px;
-}
-
-.galery-item {
-	background-image: url(../images/burguer.jpg);
-	background-size: cover;
-	background-position: center;
-	cursor: pointer;
-}
-
-.galery-item:hover {
-	opacity: 0.5;
 	transform: scale(1.05);
+	background-color: var(--secundary-color);
+}
+
+.option i {
+	transform: scale(3.5);
+}
+
+.option img {
+	width: 60px;
+	height: 43px;
 }
 
 
-footer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 400px;
-	width: 100vw;
-	border-top: 1px solid #000;
-	background-color: var(--dark);
-	color: var(--light);	
-}
 
 
-@media screen and (max-width: 1040px) {
-	#banner-title h1 {
-		font-size: 50px;
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 768px) {
-	#nav-menu {
+	header {
+		position: absolute;
+		background-color: var(--dark);
+	}
+
+	#header-container #location {
+		font-size: 13px;
+
+	}
+
+	#header-container ul {
 		display: none;
 	}
 
-	#banner {
-		height: 100vh;
-		width: 100vw;
+	#content-button {
+		display: inline-block;
 	}
+
+
 
 	#banner-title h1 {
-		font-size: 40px;
+		font-size: 45px;
 	}
 
-	#galery-burguer {
-		
-		width: 770px;
+	.option {
+		padding: 0px 20px;
 	}
-
-	#galery-content {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 1px;
-		height: 400px;
-	}
-
-	.galery-item {
-		width: 120px;
-		height: 110px;
-
-	}
-
-	footer {
-		width: 100%;
-	}
-	
-}
-
-
-
-@media screen and (max-width: 375px) {
-	
 }
