@@ -333,9 +333,6 @@ footer {
 		letter-spacing: 1px;
 	}
 
-	#banner-options {
-		
-	}
 
 	.option {
 		margin: 5px;
@@ -354,6 +351,10 @@ footer {
 	
 	.about-item img {
 		display: none;
+	}
+
+	#about-title {
+		margin-bottom: 25px;
 	}
 	.about-item p {
 		text-align: justify;
