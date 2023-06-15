@@ -1,17 +1,7 @@
-let title = document.querySelector('h1');
-
-const handleTitle = (()=> {
-
-	if(title.classList.contains('light') {
-		title.classList.remove('light');
-	} else {
-		title.classList.add('light');
-
-
-	}
-	
-	return;
-
-});
-
-setInterval(handleTitle, 1000);
+//active Menu
+document.querySelectorAll('.navOpt').forEach((size, index)=>{
+	size.addEventListener('click', (e)=> {
+		document.querySelector('.navOpt.active').classList.remove('active');
+		size.classList.add('active');
+	})
+})

@@ -73,8 +73,8 @@ header {
 }
 
 #header-container ul a:hover {
-	transform: scale(1.03);
-	letter-spacing: 1px;
+	/*transform: scale(1.01);*/
+	letter-spacing: 0.8px;
 	color: var(--primary-color);
 }
 
@@ -175,6 +175,7 @@ header {
 
 #aboutUs {
 	height: 100vh;
+	transition: all 1s linear;
 }
 
 #container-aboutUs {
